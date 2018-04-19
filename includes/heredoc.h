@@ -4,6 +4,8 @@
 # include "libft.h"
 # include "libag.h"
 # include "line_input.h"
-# include "error.h"
+# include "liberror.h"
+
+t_lstag	*heredoc(char *line, char **var, char **builtin);
 
 #endif
