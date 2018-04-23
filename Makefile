@@ -12,7 +12,7 @@ INC_FILE = heredoc.h
 INC = $(addprefix includes/, $(INC_FILE))
 
 # Sources
-SRC_FILE = heredoc.c
+SRC_FILE = heredoc.c list.c
 SRC = $(addprefix src/, $(SRC_FILE))
 
 # Objets
@@ -39,23 +39,6 @@ fclean: clean
 
 re: fclean all
 
-# Règle pour la norme
-norme: clean
-	@echo "$(MAGEN)Norme pour $(PROJECT)$(RESET)"
-	@norminette includes/ src/
-
-# Règles pour la documentation
-doxygen:
-	@echo "$(JAUNE)Pas de documentation pour $(PROJECT)$(RESET)"
-#	@echo "$(CYAN)Génération de la documentation de $(PROJECT)$(RESET)"
-#	@$(DOXYGEN) documentation/$(PROJECT).doxyconf > documentation/$(PROJECT).log
-
-cleandoxy:
-	@echo "$(JAUNE)Pas de documentation pour $(PROJECT)$(RESET)"
-#	@echo "Suppression de la documentation de $(PROJECT)"
-#	@rm -rf documentation/html
-#	@rm -rf documentation/$(PROJECT).log
-
 # Couleurs
 RESET = \033[0m
 BLANC = \033[37m
@@ -67,8 +50,5 @@ NOIR  = \033[30m
 ROUGE = \033[31m
 ROUGEC = \033[1;31m
 VERT  = \033[32m
-
-# Variables
-DOXYGEN = doxygen
 
 .PHONY: all clean fclean re doxygen cleandoxy
