@@ -61,7 +61,7 @@ static char		*read_heredoc(char *delimiter, char **var, char **builtin)
 			str_to_lst(&list, line);
 	}
 	line ? ft_strdel(&line) : NULL;
-	line = list_to_str(list);
+	line = lst_to_str(list);
 	list ? ag_lstdel(&list, del_h) : NULL;
 	return (line);
 }

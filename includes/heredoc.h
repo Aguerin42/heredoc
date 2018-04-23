@@ -17,6 +17,6 @@ t_lstag	*heredoc(char *line, char **var, char **builtin);
 */
 
 void	del_h(void *content, size_t content_size);
-char	*list_to_str(t_lstag *list);
+char	*lst_to_str(t_lstag *list);
 
 #endif

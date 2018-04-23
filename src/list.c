@@ -16,7 +16,7 @@ void	del_h(void *content, size_t content_size)
 **	Transformation de liste en une chaîne de caractères
 */
 
-char	*list_to_str(t_lstag *list)
+char	*lst_to_str(t_lstag *list)
 {
 	int		len;
 	char	*str;
