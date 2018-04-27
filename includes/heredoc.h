@@ -19,4 +19,8 @@ t_lstag	*heredoc(char *line, char **var, char **builtin);
 void	del_h(void *content, size_t content_size);
 char	*lst_to_str(t_lstag *list);
 
+int		ft_expand_dollar(char **cmd, const char **env, const char **loc, int check_tild);
+char	***get_loc(char ***loc);
+char	***get_env(char ***env);
+
 #endif

@@ -5,7 +5,7 @@ PROJECT = heredoc
 # Options de compilation
 CC = @gcc
 CFLAGS = -Wall -Werror -Wextra
-CPPFLAGS = -I includes/ -I $(LIBFT_INC) -I $(LIBAG_INC) -I $(LINE_INC) -I $(ENV_INC) -I $(CMP_INC) -I $(ERROR_INC)
+CPPFLAGS = -I includes/ -I $(LIBFT_INC) -I $(LIBAG_INC) -I $(LINE_INC) -I $(ENV_INC) -I $(CMP_INC) -I $(HIST_INC) -I $(ERROR_INC)
 
 # Headers
 INC_FILE = heredoc.h

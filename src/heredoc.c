@@ -63,6 +63,9 @@ static char		*read_heredoc(char *delimiter, char **var, char **builtin)
 	line ? ft_strdel(&line) : NULL;
 	line = lst_to_str(list);
 	list ? ag_lstdel(&list, del_h) : NULL;
+	if (ft_expand_dollar(&line, (const char **)*get_env(NULL),\
+				(const char **)*get_loc(NULL), 0))
+		return NULL;
 	return (line);
 }
 
