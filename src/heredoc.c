@@ -53,12 +53,12 @@ static char		*read_heredoc(char *delimiter, char **var, char **builtin)
 	redoc_delimiter(delimiter);
 	while (!ft_strequ(line, delimiter))
 	{
-		ft_putchar('\n');
 		line ? ft_strdel(&line) : NULL;
 		if (!(line = line_input("heredoc>", NULL, var, builtin)))
 			exit(sh_error_int(1, "in heredoc function"));
 		else if (!ft_strequ(line, delimiter))
 			str_to_lst(&list, line);
+		ft_putchar('\n');
 	}
 	line ? ft_strdel(&line) : NULL;
 	line = lst_to_str(list);
