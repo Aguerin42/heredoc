@@ -31,7 +31,7 @@ char	*lst_to_str(t_lstag *list)
 	}
 	list = head;
 	if (!(str = ft_strnew(len)))
-		exit(sh_error_int(1, "in list_to_str function"));
+		sh_error_exit(1, "in list_to_str function");
 	while (str && list)
 	{
 		str = ft_strcat(str, list->content);
