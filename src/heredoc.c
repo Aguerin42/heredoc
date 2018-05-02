@@ -15,7 +15,7 @@ static char		*find_delimiter(char *line)
 	while (line[b] && ag_isspace(line[b]))
 		b++;
 	e = b;
-	while (line[e] && !ag_isspace(line[e]))
+	while (line[e] && !ag_isspace(line[e]) && !istok(line[e]))
 		e++;
 	if ((e - b) && !(delimiter = ft_strsub(line, b, e - b)))
 		sh_error_exit(1, "in find_delimiter function");
