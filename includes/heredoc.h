@@ -10,7 +10,7 @@
 **	heredoc.c
 */
 
-t_lstag	*heredoc(char *line, char **var, char **builtin);
+int		heredoc(char *line, t_lstag **hd, char **builtin);
 
 /*
 **	list.c
